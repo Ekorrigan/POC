@@ -1,5 +1,5 @@
 /* Variables globales */
-var numver = "0.1.1";
+var numver = "0.1.0";
 var curver = "";
 /* IndexDB */
 var itemDB = {};
