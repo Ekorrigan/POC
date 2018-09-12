@@ -1,11 +1,11 @@
 var uptodate = true;
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js');
+importScripts('workbox/workbox-sw.js');
 if (workbox) {
 	console.log(`Yay! Workbox is loaded 🎉         -     uptodate :` + uptodate);
   workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "e786abbb42629a288ae2b1c5b8e747ad"
+    "revision": "a89ea0d06d9823bef6a2003e5c62eeff"
   },
   {
     "url": "style/main.css",
@@ -13,7 +13,7 @@ if (workbox) {
   },
   {
     "url": "js/main.js",
-    "revision": "d699b8ab1e4d91cf6fc201977d00a5f9"
+    "revision": "1b6be804a5c3991d59e4137876c425ee"
   },
   {
     "url": "js/animation.js",
@@ -33,11 +33,11 @@ if (workbox) {
   },
   {
     "url": "pages/offline.html",
-    "revision": "60fdf44d5438078f9f242d504f013941"
+    "revision": "c5d1b233b9a2f1d1c60b0f37ee1b9ed3"
   },
   {
     "url": "pages/404.html",
-    "revision": "85695da32717e30feceb88d152194353"
+    "revision": "316980af0b39d8ea7a64779d2dc344d0"
   }
 ]);
   const NetWorkHandler = workbox.strategies.staleWhileRevalidate({
