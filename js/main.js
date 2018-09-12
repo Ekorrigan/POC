@@ -51,7 +51,7 @@ function updateOnlineStatus() {
    var etat = navigator.onLine ? "online" : "offline";
    var status = document.getElementById("status");
    var lnkup = document.getElementById("upgrade");
-   status.src="/images/icon/"+etat+".png";
+   status.src="images/icon/"+etat+".png";
    status.alt=etat;
    if(lnkup){
 	   if(etat == "offline"){
