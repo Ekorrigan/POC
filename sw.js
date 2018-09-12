@@ -41,7 +41,7 @@ if (workbox) {
   }
 ]);
   const NetWorkHandler = workbox.strategies.staleWhileRevalidate({
-    cacheName: 'diag-cache',
+    cacheName: 'poc-cache',
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 50,
