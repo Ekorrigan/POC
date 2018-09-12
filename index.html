@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <!-- Set the viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+  <!-- Set character encoding -->
+  <meta charset="utf-8">
+
+  <!-- Set title -->
+  <title>POC</title>
+
+  <!-- Request styles -->
+  <link rel="stylesheet" href="/style/main.css" />
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <ul class="navbar">
+      <li><a href="/">Home</a></li>
+      <li class="right-icon"><img id="status" src="/images/icon/online.png" alt="online" /></li>
+    </ul>
+  </header>
+
+  <article>
+    <h1>Proof of concept</h1>
+	<a href="pages/test.html"> article</a>
+  </article>
+  <footer>
+	Version : 
+  </footer>
+
+  <script src="/js/animation.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log(`Service Worker registered ! Scope: ${registration.scope}`);
+          })
+          .catch(err => {
+            console.log(`Service Worker registration failed: ${err}`);
+          });
+      });
+    }
+  </script>
+
+</body>
+</html>
